@@ -69,6 +69,8 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - uses: wangyoucao577/go-release-action@v1
         with:
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           compress_assets: true
           sha256sum: true
