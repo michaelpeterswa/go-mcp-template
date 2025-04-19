@@ -104,7 +104,11 @@ func main() {
 		),
 	}
 
-	mcpserver.StartServer(ctx, c, mcpserver.WithTools(tools))
+	err = mcpserver.StartServer(ctx, c, mcpserver.WithTools(tools))
+	if err != nil {
+		slog.Error("could not start server", slog.String("error", err.Error()))
+		os.Exit(1)
+	}
 }
 
 type Result struct {
