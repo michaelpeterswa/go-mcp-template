@@ -74,3 +74,4 @@ jobs:
           sha256sum: true
           # yamllint disable-line rule:line-length
           ldflags: -X github.com/michaelpeterswa/go-mcp-template/internal/config.AppVersion=${{ steps.meta.outputs.version }}
+          project_path: ./cmd/go-mcp-template
