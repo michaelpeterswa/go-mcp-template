@@ -72,4 +72,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           compress_assets: true
           sha256sum: true
-          ldflags: -X github.com/michaelpeterswa/go-mcp-template/internal/config.AppVersion=${{ steps.meta.outputs.version }} #  yamllint disable-line rule:line-length
+          # yamllint disable-line rule:line-length
+          ldflags: -X github.com/michaelpeterswa/go-mcp-template/internal/config.AppVersion=${{ steps.meta.outputs.version }}
